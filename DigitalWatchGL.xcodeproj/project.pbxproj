@@ -1,0 +1,360 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		77AD6AF12AE85F07008D0138 /* DigitalWatchGLView.h in Headers */ = {isa = PBXBuildFile; fileRef = 77AD6AF02AE85F07008D0138 /* DigitalWatchGLView.h */; };
+		77AD6AF32AE85F07008D0138 /* DigitalWatchGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 77AD6AF22AE85F07008D0138 /* DigitalWatchGLView.m */; };
+		77AD6AFB2AE8608B008D0138 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77AD6AFA2AE8608B008D0138 /* Cocoa.framework */; };
+		77AD6AFD2AE86093008D0138 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77AD6AFC2AE86093008D0138 /* OpenGL.framework */; };
+		77AD6AFF2AE8609D008D0138 /* ScreenSaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77AD6AFE2AE8609D008D0138 /* ScreenSaver.framework */; };
+		77AD6B0B2AE862D4008D0138 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77AD6B0A2AE862D4008D0138 /* AppKit.framework */; };
+		77AD6B0D2AE862E1008D0138 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77AD6B0C2AE862E1008D0138 /* Foundation.framework */; };
+		77C93CED2AE9938000DFFC7F /* thumbnail@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77C93CEB2AE9938000DFFC7F /* thumbnail@2x.png */; };
+		77C93CEE2AE9938000DFFC7F /* thumbnail.png in Resources */ = {isa = PBXBuildFile; fileRef = 77C93CEC2AE9938000DFFC7F /* thumbnail.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		77AD6AED2AE85F07008D0138 /* DigitalWatchGL.saver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DigitalWatchGL.saver; sourceTree = BUILT_PRODUCTS_DIR; };
+		77AD6AF02AE85F07008D0138 /* DigitalWatchGLView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DigitalWatchGLView.h; sourceTree = "<group>"; };
+		77AD6AF22AE85F07008D0138 /* DigitalWatchGLView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DigitalWatchGLView.m; sourceTree = "<group>"; };
+		77AD6AFA2AE8608B008D0138 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		77AD6AFC2AE86093008D0138 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		77AD6AFE2AE8609D008D0138 /* ScreenSaver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScreenSaver.framework; path = System/Library/Frameworks/ScreenSaver.framework; sourceTree = SDKROOT; };
+		77AD6B0A2AE862D4008D0138 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		77AD6B0C2AE862E1008D0138 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		77AD6B0E2AE86865008D0138 /* defvar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = defvar.h; sourceTree = "<group>"; };
+		77C93CEB2AE9938000DFFC7F /* thumbnail@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thumbnail@2x.png"; sourceTree = "<group>"; };
+		77C93CEC2AE9938000DFFC7F /* thumbnail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thumbnail.png; sourceTree = "<group>"; };
+		77C93CEF2AE993B200DFFC7F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		77AD6AEA2AE85F07008D0138 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77AD6B0D2AE862E1008D0138 /* Foundation.framework in Frameworks */,
+				77AD6AFF2AE8609D008D0138 /* ScreenSaver.framework in Frameworks */,
+				77AD6B0B2AE862D4008D0138 /* AppKit.framework in Frameworks */,
+				77AD6AFB2AE8608B008D0138 /* Cocoa.framework in Frameworks */,
+				77AD6AFD2AE86093008D0138 /* OpenGL.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		77AD6AE32AE85F07008D0138 = {
+			isa = PBXGroup;
+			children = (
+				77AD6AEF2AE85F07008D0138 /* DigitalWatchGL */,
+				77C93CEA2AE992D100DFFC7F /* Resources */,
+				77AD6AEE2AE85F07008D0138 /* Products */,
+				77AD6AF92AE8608B008D0138 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		77AD6AEE2AE85F07008D0138 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				77AD6AED2AE85F07008D0138 /* DigitalWatchGL.saver */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		77AD6AEF2AE85F07008D0138 /* DigitalWatchGL */ = {
+			isa = PBXGroup;
+			children = (
+				77AD6AF02AE85F07008D0138 /* DigitalWatchGLView.h */,
+				77AD6AF22AE85F07008D0138 /* DigitalWatchGLView.m */,
+				77AD6B0E2AE86865008D0138 /* defvar.h */,
+			);
+			path = DigitalWatchGL;
+			sourceTree = "<group>";
+		};
+		77AD6AF92AE8608B008D0138 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				77AD6B0C2AE862E1008D0138 /* Foundation.framework */,
+				77AD6B0A2AE862D4008D0138 /* AppKit.framework */,
+				77AD6AFE2AE8609D008D0138 /* ScreenSaver.framework */,
+				77AD6AFC2AE86093008D0138 /* OpenGL.framework */,
+				77AD6AFA2AE8608B008D0138 /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		77C93CEA2AE992D100DFFC7F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				77C93CEF2AE993B200DFFC7F /* Info.plist */,
+				77C93CEC2AE9938000DFFC7F /* thumbnail.png */,
+				77C93CEB2AE9938000DFFC7F /* thumbnail@2x.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		77AD6AE82AE85F07008D0138 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77AD6AF12AE85F07008D0138 /* DigitalWatchGLView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		77AD6AEC2AE85F07008D0138 /* DigitalWatchGL */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 77AD6AF62AE85F07008D0138 /* Build configuration list for PBXNativeTarget "DigitalWatchGL" */;
+			buildPhases = (
+				77AD6AE82AE85F07008D0138 /* Headers */,
+				77AD6AE92AE85F07008D0138 /* Sources */,
+				77AD6AEA2AE85F07008D0138 /* Frameworks */,
+				77AD6AEB2AE85F07008D0138 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DigitalWatchGL;
+			productName = DigitalWatchGL;
+			productReference = 77AD6AED2AE85F07008D0138 /* DigitalWatchGL.saver */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		77AD6AE42AE85F07008D0138 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					77AD6AEC2AE85F07008D0138 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = 77AD6AE72AE85F07008D0138 /* Build configuration list for PBXProject "DigitalWatchGL" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 77AD6AE32AE85F07008D0138;
+			productRefGroup = 77AD6AEE2AE85F07008D0138 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				77AD6AEC2AE85F07008D0138 /* DigitalWatchGL */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		77AD6AEB2AE85F07008D0138 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77C93CEE2AE9938000DFFC7F /* thumbnail.png in Resources */,
+				77C93CED2AE9938000DFFC7F /* thumbnail@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		77AD6AE92AE85F07008D0138 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77AD6AF32AE85F07008D0138 /* DigitalWatchGLView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		77AD6AF42AE85F07008D0138 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		77AD6AF52AE85F07008D0138 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		77AD6AF72AE85F07008D0138 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSPrincipalClass = DigitalWatchGLView;
+				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rty65tt.DigitalWatchGL;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				WRAPPER_EXTENSION = saver;
+			};
+			name = Debug;
+		};
+		77AD6AF82AE85F07008D0138 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSPrincipalClass = DigitalWatchGLView;
+				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rty65tt.DigitalWatchGL;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				WRAPPER_EXTENSION = saver;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		77AD6AE72AE85F07008D0138 /* Build configuration list for PBXProject "DigitalWatchGL" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				77AD6AF42AE85F07008D0138 /* Debug */,
+				77AD6AF52AE85F07008D0138 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		77AD6AF62AE85F07008D0138 /* Build configuration list for PBXNativeTarget "DigitalWatchGL" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				77AD6AF72AE85F07008D0138 /* Debug */,
+				77AD6AF82AE85F07008D0138 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 77AD6AE42AE85F07008D0138 /* Project object */;
+}
