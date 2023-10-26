@@ -15,7 +15,6 @@
 
 #import "defvar.h"
 
-
 @interface DigitalWatchGLView : ScreenSaverView
 {
     NSOpenGLView *glView;
@@ -36,9 +35,9 @@
     float step;
     int cy;
     
-    
 }
 
 - (void)setUpOpenGL;
+- (void)setFrameSize:(NSSize)newSize;
 
 @end

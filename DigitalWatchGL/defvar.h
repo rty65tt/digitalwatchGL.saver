@@ -5,17 +5,11 @@
 //  Created by u1 on 25.10.2023.
 //
 
-//#ifndef defvar_h
-//#define defvar_h
-
 #define FPS             4.0
 #define CELLC           10
 #define SCALE           0.85
 #define XYSCALE         0.9
 #define CIRCLES_NUM     71
-
-
-//#endif /* defvar_h */
 
 static char digit_matrix[451] = "\
 111111000110001100011000110001100011000111111\
@@ -48,10 +42,22 @@ static GLubyte  def_ss_colors[] = {58, 56, 5};
 static GLubyte  def_ww_colors[] = {63, 50, 38};
 static GLubyte  def_dd_colors[] = {38, 76, 0};
 
+static GLubyte  def_wd_colors[] = {60, 70, 60};
+static GLubyte  def_ew_colors[] = {78, 0, 0};
+static GLubyte  def_cd_colors[] = {78, 48, 0};
+
+
 static GLubyte * colors = def_hh_colors;
 
 typedef struct {
+    int wday;
+    int mday;
+
     int hour;
     int minute;
     int second;
+
 } CurTime;
+
+
+

@@ -5,9 +5,7 @@
 //  Created by u1 on 24.10.2023.
 //
 
-#include <stdlib.h>
-
-
+//#include <stdlib.h>
 #import "DigitalWatchGLView.h"
 
 @implementation DigitalWatchGLView
@@ -16,7 +14,6 @@
 {
     self = [super initWithFrame:frame isPreview:isPreview];
     if (self) {
-        
         
         space = 2.0f / CIRCLES_NUM;
         step = space * 0.4f;
@@ -27,7 +24,7 @@
         scale = SCALE;
         scale_vec = 0.01f;
         vec_range = 0.1f;
-        
+
         NSOpenGLPixelFormatAttribute attributes[] = {
             NSOpenGLPFAAccelerated,
             NSOpenGLPFABackingStore,
@@ -53,7 +50,7 @@
 {
     [[glView openGLContext] makeCurrentContext];
     
-    glClearColor( 0.8f, 0.7f, 0.8f, 1.0f );
+    glClearColor( 0.f, 0.f, 0.f, 1.0f );
 
     glDepthFunc( GL_LEQUAL );
     glHint( GL_PERSPECTIVE_CORRECTION_HINT, GL_NICEST );
@@ -64,7 +61,6 @@
 {
     [super setFrameSize:newSize];
     [glView setFrameSize:newSize];
-    
     
     width = (GLsizei)newSize.width;
     height = (GLsizei)newSize.height;
@@ -213,11 +209,11 @@
     [self draw_symbol:8 x:-19 y:-8 cel:5 row:9 p_matrix:digit_matrix]; //hh
     [self draw_symbol:8 x:-13 y:-8 cel:5 row:9 p_matrix:digit_matrix]; //hh
     [self draw_symbol:8 x:-5  y:-8 cel:5 row:9 p_matrix:digit_matrix]; //mm
-    [self draw_symbol:8 x:1   y:-8  cel:5 row:9 p_matrix:digit_matrix]; //mm
-    [self draw_symbol:8 x:9   y:-8  cel:5 row:9 p_matrix:digit_matrix]; //ss
+    [self draw_symbol:8 x:1   y:-8 cel:5 row:9 p_matrix:digit_matrix]; //mm
+    [self draw_symbol:8 x:9   y:-8 cel:5 row:9 p_matrix:digit_matrix]; //ss
     [self draw_symbol:8 x:15  y:-8 cel:5 row:9 p_matrix:digit_matrix]; //ss
     [self draw_symbol:2 x:-7  y:-8 cel:1 row:9 p_matrix:dots_matrix]; //::
-    [self draw_symbol:2 x:7   y:-8  cel:1 row:9 p_matrix:dots_matrix]; //::
+    [self draw_symbol:2 x:7   y:-8 cel:1 row:9 p_matrix:dots_matrix]; //::
 
     // foreground font
     colors = def_hh_colors;
@@ -225,44 +221,71 @@
     CurTime st;
     NSDate *now = [NSDate date];
     NSCalendar *calendar = [NSCalendar currentCalendar];
-    st.hour = (int)[calendar component:NSCalendarUnitHour fromDate:now];
-    st.minute = (int)[calendar component:NSCalendarUnitMinute fromDate:now];
-    st.second = (int)[calendar component:NSCalendarUnitSecond fromDate:now];
-    
+    st.hour =   (int)[calendar component:NSCalendarUnitHour             fromDate:now];
+    st.minute = (int)[calendar component:NSCalendarUnitMinute           fromDate:now];
+    st.second = (int)[calendar component:NSCalendarUnitSecond           fromDate:now];
+    st.wday =   (int)[calendar component:NSCalendarUnitWeekdayOrdinal   fromDate:now];
+    st.mday =   (int)[calendar component:NSCalendarUnitDay              fromDate:now];
+
     
     [self draw_symbol:st.hour / 10     x:-19   y:-8 cel:5  row:9 p_matrix:digit_matrix];
     [self draw_symbol:st.hour % 10     x:-13   y:-8 cel:5  row:9 p_matrix:digit_matrix];
     [self draw_symbol:st.minute / 10   x:-5    y:-8 cel:5  row:9 p_matrix:digit_matrix];
     [self draw_symbol:st.minute % 10   x:1     y:-8 cel:5  row:9 p_matrix:digit_matrix];
+    
+    int wwx = 5;
+    int wlx = -17;
+    int wdx = wlx - 2;
+    // Draw Week Line
+    for(int i=0; i < 7; i++) {
+        colors = def_wd_colors;
+        if (i > 4 ) {colors = def_ew_colors;}
+//        NSLog(@"Week Day %i", st.wday);
+        [self draw_symbol:0         x:wlx+(i*wwx)   y:2 cel:wwx  row:1 p_matrix:"01110"];
+        if (st.wday == i ) { // Select Curent Day
+            [self draw_symbol:0     x:wlx+(i*wwx)   y:3 cel:wwx  row:1 p_matrix:"01110"];
+        }
+    }
+
+    // Draw Month Day
+    colors = def_cd_colors;
+    [self draw_symbol:st.mday / 10  x:wdx+(st.wday*wwx)    y:5 cel:4  row:7 p_matrix:m_deys_matrix];
+    [self draw_symbol:st.mday % 10  x:wdx+(st.wday*wwx)+5  y:5 cel:4  row:7 p_matrix:m_deys_matrix];
+    
     // Draw Seconds
     if (st.second % 2 == 1)
     {
         colors = def_hh_colors;
     }
+
     [self draw_symbol:st.second / 10   x:9     y:-8 cel:5  row:9 p_matrix:digit_matrix];
     [self draw_symbol:st.second % 10   x:15    y:-8 cel:5  row:9 p_matrix:digit_matrix];
     
+    // Blink Dots
     int dc = st.second % 2;
     [self draw_symbol:dc x:-7  y:-8 cel:1 row:9 p_matrix:dots_matrix]; //::
     [self draw_symbol:dc x:7   y:-8 cel:1 row:9 p_matrix:dots_matrix]; //::
-
+    
     
     [[glView openGLContext] flushBuffer];
     [self setNeedsDisplay:YES];
     
-    
-//    if (st.second % 5 == 0 ) {
-    if (st.second == 0 ) {
-        
+#ifdef PREVIEW
+    if (st.second % 6 == 0 ) {
+#else
+    if (st.second == 59 ) {
+#endif /* PREVIEW */
+
         if (scale_vec >= 5.0f)  {vec_range = -0.1f;}
         if (scale_vec <= -5.0f) {vec_range = 0.1f;}
         scale_vec = scale_vec + vec_range;
         scale = 0.80 + (0.2 * sin(scale_vec));
         [self startAnimation];
         [NSThread sleepForTimeInterval:0.025];
+        
     }
 
-//    return;
+    return;
 }
 
 //- (void)dealloc

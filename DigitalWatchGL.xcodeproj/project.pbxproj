@@ -16,6 +16,16 @@
 		77AD6B0D2AE862E1008D0138 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77AD6B0C2AE862E1008D0138 /* Foundation.framework */; };
 		77C93CED2AE9938000DFFC7F /* thumbnail@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77C93CEB2AE9938000DFFC7F /* thumbnail@2x.png */; };
 		77C93CEE2AE9938000DFFC7F /* thumbnail.png in Resources */ = {isa = PBXBuildFile; fileRef = 77C93CEC2AE9938000DFFC7F /* thumbnail.png */; };
+		77DF940A2AEB07CC007A9C95 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 77DF94092AEB07CC007A9C95 /* AppDelegate.m */; };
+		77DF940C2AEB07CD007A9C95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77DF940B2AEB07CD007A9C95 /* Assets.xcassets */; };
+		77DF940F2AEB07CD007A9C95 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77DF940D2AEB07CD007A9C95 /* MainMenu.xib */; };
+		77DF94112AEB07CD007A9C95 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 77DF94102AEB07CD007A9C95 /* main.m */; };
+		77DF94162AEB0897007A9C95 /* DigitalWatchGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 77AD6AF22AE85F07008D0138 /* DigitalWatchGLView.m */; };
+		77DF94172AEB0901007A9C95 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77AD6B0A2AE862D4008D0138 /* AppKit.framework */; };
+		77DF94182AEB0906007A9C95 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77AD6AFC2AE86093008D0138 /* OpenGL.framework */; };
+		77DF94192AEB090C007A9C95 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77AD6AFA2AE8608B008D0138 /* Cocoa.framework */; };
+		77DF941A2AEB0912007A9C95 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77AD6B0C2AE862E1008D0138 /* Foundation.framework */; };
+		77DF941B2AEB091E007A9C95 /* ScreenSaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77AD6AFE2AE8609D008D0138 /* ScreenSaver.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +41,12 @@
 		77C93CEB2AE9938000DFFC7F /* thumbnail@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thumbnail@2x.png"; sourceTree = "<group>"; };
 		77C93CEC2AE9938000DFFC7F /* thumbnail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thumbnail.png; sourceTree = "<group>"; };
 		77C93CEF2AE993B200DFFC7F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		77DF94062AEB07CC007A9C95 /* PreviewApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PreviewApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		77DF94082AEB07CC007A9C95 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		77DF94092AEB07CC007A9C95 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		77DF940B2AEB07CD007A9C95 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		77DF940E2AEB07CD007A9C95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		77DF94102AEB07CD007A9C95 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +62,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		77DF94032AEB07CC007A9C95 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77DF941B2AEB091E007A9C95 /* ScreenSaver.framework in Frameworks */,
+				77DF941A2AEB0912007A9C95 /* Foundation.framework in Frameworks */,
+				77DF94192AEB090C007A9C95 /* Cocoa.framework in Frameworks */,
+				77DF94182AEB0906007A9C95 /* OpenGL.framework in Frameworks */,
+				77DF94172AEB0901007A9C95 /* AppKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -54,6 +82,7 @@
 			children = (
 				77AD6AEF2AE85F07008D0138 /* DigitalWatchGL */,
 				77C93CEA2AE992D100DFFC7F /* Resources */,
+				77DF94072AEB07CC007A9C95 /* PreviewApp */,
 				77AD6AEE2AE85F07008D0138 /* Products */,
 				77AD6AF92AE8608B008D0138 /* Frameworks */,
 			);
@@ -63,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				77AD6AED2AE85F07008D0138 /* DigitalWatchGL.saver */,
+				77DF94062AEB07CC007A9C95 /* PreviewApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -99,6 +129,18 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		77DF94072AEB07CC007A9C95 /* PreviewApp */ = {
+			isa = PBXGroup;
+			children = (
+				77DF94082AEB07CC007A9C95 /* AppDelegate.h */,
+				77DF94092AEB07CC007A9C95 /* AppDelegate.m */,
+				77DF940B2AEB07CD007A9C95 /* Assets.xcassets */,
+				77DF940D2AEB07CD007A9C95 /* MainMenu.xib */,
+				77DF94102AEB07CD007A9C95 /* main.m */,
+			);
+			path = PreviewApp;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -131,6 +173,23 @@
 			productReference = 77AD6AED2AE85F07008D0138 /* DigitalWatchGL.saver */;
 			productType = "com.apple.product-type.bundle";
 		};
+		77DF94052AEB07CC007A9C95 /* PreviewApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 77DF94132AEB07CD007A9C95 /* Build configuration list for PBXNativeTarget "PreviewApp" */;
+			buildPhases = (
+				77DF94022AEB07CC007A9C95 /* Sources */,
+				77DF94032AEB07CC007A9C95 /* Frameworks */,
+				77DF94042AEB07CC007A9C95 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PreviewApp;
+			productName = PreviewApp;
+			productReference = 77DF94062AEB07CC007A9C95 /* PreviewApp.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -141,6 +200,9 @@
 				LastUpgradeCheck = 1420;
 				TargetAttributes = {
 					77AD6AEC2AE85F07008D0138 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					77DF94052AEB07CC007A9C95 = {
 						CreatedOnToolsVersion = 14.2;
 					};
 				};
@@ -159,6 +221,7 @@
 			projectRoot = "";
 			targets = (
 				77AD6AEC2AE85F07008D0138 /* DigitalWatchGL */,
+				77DF94052AEB07CC007A9C95 /* PreviewApp */,
 			);
 		};
 /* End PBXProject section */
@@ -173,6 +236,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		77DF94042AEB07CC007A9C95 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77DF940C2AEB07CD007A9C95 /* Assets.xcassets in Resources */,
+				77DF940F2AEB07CD007A9C95 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -184,7 +256,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		77DF94022AEB07CC007A9C95 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77DF94162AEB0897007A9C95 /* DigitalWatchGLView.m in Sources */,
+				77DF94112AEB07CD007A9C95 /* main.m in Sources */,
+				77DF940A2AEB07CC007A9C95 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		77DF940D2AEB07CD007A9C95 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				77DF940E2AEB07CD007A9C95 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		77AD6AF42AE85F07008D0138 /* Debug */ = {
@@ -333,6 +426,65 @@
 			};
 			name = Release;
 		};
+		77DF94142AEB07CD007A9C95 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = PreviewApp/PreviewApp.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = "PREVIEW=1";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainNibFile = MainMenu;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				INFOPLIST_KEY_UILaunchStoryboardName = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rty65tt.PreviewApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+			};
+			name = Debug;
+		};
+		77DF94152AEB07CD007A9C95 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = PreviewApp/PreviewApp.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_APP_SANDBOX = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = "PREVIEW=1";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainNibFile = MainMenu;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				INFOPLIST_KEY_UILaunchStoryboardName = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rty65tt.PreviewApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -350,6 +502,15 @@
 			buildConfigurations = (
 				77AD6AF72AE85F07008D0138 /* Debug */,
 				77AD6AF82AE85F07008D0138 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		77DF94132AEB07CD007A9C95 /* Build configuration list for PBXNativeTarget "PreviewApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				77DF94142AEB07CD007A9C95 /* Debug */,
+				77DF94152AEB07CD007A9C95 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
