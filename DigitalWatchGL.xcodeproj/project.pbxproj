@@ -44,6 +44,7 @@
 		77AD6B0E2AE86865008D0138 /* defvar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = defvar.h; sourceTree = "<group>"; };
 		77C0F3752AEC65EE0022D040 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		77C0F37B2AEC660B0022D040 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		77C0F37E2AEC72DC0022D040 /* screenshot.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = screenshot.webp; sourceTree = "<group>"; };
 		77C93CEB2AE9938000DFFC7F /* thumbnail@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thumbnail@2x.png"; sourceTree = "<group>"; };
 		77C93CEC2AE9938000DFFC7F /* thumbnail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thumbnail.png; sourceTree = "<group>"; };
 		77DF94062AEB07CC007A9C95 /* PreviewApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PreviewApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,6 +88,7 @@
 			children = (
 				77C0F37B2AEC660B0022D040 /* LICENSE */,
 				77C0F3752AEC65EE0022D040 /* README.md */,
+				77C0F37E2AEC72DC0022D040 /* screenshot.webp */,
 				77AD6AEF2AE85F07008D0138 /* DigitalWatchGL */,
 				77C93CEA2AE992D100DFFC7F /* Resources */,
 				77DF94072AEB07CC007A9C95 /* PreviewApp */,

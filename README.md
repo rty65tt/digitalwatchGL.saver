@@ -2,4 +2,4 @@
 Screensaver macOS Objective-C and OpenGL 
 
 
-![screensot1](screenshot.webp  "Screenshot")
+![screenshot1](screenshot.webp  "Screenshot")
