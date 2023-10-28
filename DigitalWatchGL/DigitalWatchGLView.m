@@ -221,18 +221,20 @@
     CurTime st;
     NSDate *now = [NSDate date];
     NSCalendar *calendar = [NSCalendar currentCalendar];
-    st.hour =   (int)[calendar component:NSCalendarUnitHour             fromDate:now];
-    st.minute = (int)[calendar component:NSCalendarUnitMinute           fromDate:now];
-    st.second = (int)[calendar component:NSCalendarUnitSecond           fromDate:now];
-    st.wday =   (int)[calendar component:NSCalendarUnitWeekdayOrdinal   fromDate:now];
-    st.mday =   (int)[calendar component:NSCalendarUnitDay              fromDate:now];
+    st.hour =   (int)[calendar component:NSCalendarUnitHour      fromDate:now];
+    st.minute = (int)[calendar component:NSCalendarUnitMinute    fromDate:now];
+    st.second = (int)[calendar component:NSCalendarUnitSecond    fromDate:now];
+    st.wday =   (int)[calendar component:NSCalendarUnitWeekday   fromDate:now];
+    st.mday =   (int)[calendar component:NSCalendarUnitDay       fromDate:now];
 
+    st.wday = (st.wday == 1) ? 7 : st.wday-1;
     
     [self draw_symbol:st.hour / 10     x:-19   y:-8 cel:5  row:9 p_matrix:digit_matrix];
     [self draw_symbol:st.hour % 10     x:-13   y:-8 cel:5  row:9 p_matrix:digit_matrix];
     [self draw_symbol:st.minute / 10   x:-5    y:-8 cel:5  row:9 p_matrix:digit_matrix];
     [self draw_symbol:st.minute % 10   x:1     y:-8 cel:5  row:9 p_matrix:digit_matrix];
     
+    int cd = 0;
     int wwx = 5;
     int wlx = -17;
     int wdx = wlx - 2;
@@ -240,17 +242,18 @@
     for(int i=0; i < 7; i++) {
         colors = def_wd_colors;
         if (i > 4 ) {colors = def_ew_colors;}
-//        NSLog(@"Week Day %i", st.wday);
+        NSLog(@"Week Day %i", st.wday);
         [self draw_symbol:0         x:wlx+(i*wwx)   y:2 cel:wwx  row:1 p_matrix:"01110"];
-        if (st.wday == i ) { // Select Curent Day
+        if (st.wday == i+1 ) { // Select Curent Day
+            cd = i;
             [self draw_symbol:0     x:wlx+(i*wwx)   y:3 cel:wwx  row:1 p_matrix:"01110"];
         }
     }
 
     // Draw Month Day
     colors = def_cd_colors;
-    [self draw_symbol:st.mday / 10  x:wdx+(st.wday*wwx)    y:5 cel:4  row:7 p_matrix:m_deys_matrix];
-    [self draw_symbol:st.mday % 10  x:wdx+(st.wday*wwx)+5  y:5 cel:4  row:7 p_matrix:m_deys_matrix];
+    [self draw_symbol:st.mday / 10  x:wdx+(cd*wwx)    y:5 cel:4  row:7 p_matrix:m_deys_matrix];
+    [self draw_symbol:st.mday % 10  x:wdx+(cd*wwx)+5  y:5 cel:4  row:7 p_matrix:m_deys_matrix];
     
     // Draw Seconds
     if (st.second % 2 == 1)
