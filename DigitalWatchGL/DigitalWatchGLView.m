@@ -242,7 +242,9 @@
     for(int i=0; i < 7; i++) {
         colors = def_wd_colors;
         if (i > 4 ) {colors = def_ew_colors;}
+#ifdef PREVIEW
         NSLog(@"Week Day %i", st.wday);
+#endif /* PREVIEW */
         [self draw_symbol:0         x:wlx+(i*wwx)   y:2 cel:wwx  row:1 p_matrix:"01110"];
         if (st.wday == i+1 ) { // Select Curent Day
             cd = i;
