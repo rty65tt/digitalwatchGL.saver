@@ -35,6 +35,10 @@
     float step;
     int cy;
     
+    
+    IBOutlet id configureSheet;
+    
+    
 }
 
 - (void)setUpOpenGL;
