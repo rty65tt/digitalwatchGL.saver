@@ -5,7 +5,7 @@
 //  Created by u1 on 25.10.2023.
 //
 
-#define FPS             4.0
+//#define FPS             6.0
 #define CELLC           10
 #define SCALE           0.85
 #define XYSCALE         0.9
