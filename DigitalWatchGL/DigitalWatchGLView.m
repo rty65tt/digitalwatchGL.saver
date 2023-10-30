@@ -27,13 +27,15 @@
         scale_vec = 0.01f;
         vec_range = 0.1f;
         
-        
         ScreenSaverDefaults *defaults =
             [ScreenSaverDefaults defaultsForModuleWithName: sName];
         [defaults synchronize];
-//        vec_range       = [defaults floatForKey:@"zoom"] / 100;
-        glitchfx        = (int)[defaults integerForKey:@"glitchfx"];
-        fps_var         = [defaults floatForKey:@"fpsvar"];
+
+        gfx_vol         = (int)[defaults integerForKey:@"gfxvol"];
+        glitchfx        = (gfx_vol) ? gfx_vol * gfx_vol : 10000;
+        
+        fps_vol         = [defaults floatForKey:@"fpsvol"];
+        fps_vol         = (fps_vol) ? fps_vol : 4.0;
         
         NSOpenGLPixelFormatAttribute attributes[] = {
             NSOpenGLPFAAccelerated,
@@ -47,12 +49,10 @@
         glView = [[NSOpenGLView alloc] initWithFrame: NSZeroRect
                                          pixelFormat: format];
         
-
-
         [self addSubview:glView];
         [self setUpOpenGL];
         
-        [self setAnimationTimeInterval:1/fps_var];
+        [self setAnimationTimeInterval:1/fps_vol];
     }
     return self;
 }
@@ -237,7 +237,7 @@
     st.second = (int)[calendar component:NSCalendarUnitSecond    fromDate:now];
     st.wday =   (int)[calendar component:NSCalendarUnitWeekday   fromDate:now];
     st.mday =   (int)[calendar component:NSCalendarUnitDay       fromDate:now];
-
+    
     st.wday = (st.wday == 1) ? 7 : st.wday-1;
     
     [self draw_symbol:st.hour / 10     x:-19   y:-8 cel:5  row:9 p_matrix:digit_matrix];
@@ -325,66 +325,40 @@
                  topLevelObjects: nil];
     }
     
-    [IBzoom     setFloatValue:(vec_range * 100)];
-    [IBglitchfx setIntValue:glitchfx];
-    [IBfpsvar   setFloatValue:fps_var];
-    
+    [IBgfxvol setIntValue:gfx_vol];
+    [IBfpsvol setFloatValue:fps_vol];
+   
     return configureSheet;
     
 }
-
     
-- (IBAction) closeSheet_save:(id) sender {
+- (IBAction) configureSheet_save:(id) sender {
 
     ScreenSaverDefaults *defaults =
         [ScreenSaverDefaults defaultsForModuleWithName:sName];
     
-    vec_range   =  [IBzoom      floatValue] / 100 ;
-    glitchfx    =  [IBglitchfx  intValue];
-    fps_var     =  [IBfpsvar    floatValue];
-
-    [defaults setFloat:vec_range    forKey:@"zoom"];
-    [defaults setInteger:glitchfx   forKey:@"glitchfx"];
-    [defaults setFloat:fps_var      forKey:@"fpsvar"];
+    gfx_vol =  [IBgfxvol intValue];
+    fps_vol =  [IBfpsvol floatValue];
+    
+    [defaults setInteger:gfx_vol   forKey:@"gfxvol"];
+    [defaults setFloat:fps_vol     forKey:@"fpsvol"];
     
     [defaults synchronize];
-    [[NSApplication sharedApplication] endSheet:configureSheet];
-}
-    
-- (IBAction) resetConfigureSheet:(id) sender
-{
-
-//    BOOL wireframe_test, edges_test;
-//    int shape_test;
-//    float speed_test;
-//    float alpha_test;
-    
-//    wireframe_test = ( [IBwireframe state] == NSControlStateValueOn ) ? true : false;
-//    edges_test    = ( [IBedges state] == NSControlStateValueOn ) ? true : false;
-//    shape_test    = (int)[IBshape indexOfSelectedItem];
-//    zoom           = [IBzoom floatValue];
-//    glitchfx       = [IBglitchfx intValue];
-//    fps            = [IBfpsvar intValue];
-    
-//
-//    [self setAnimationTimeInterval:default_speed/speed_test];
-    
-}
-
-    
-- (IBAction) closeSheet_cancel:(id) sender {
-
-    [[NSApplication sharedApplication] endSheet:configureSheet];
-    
-}
-
-
-
-- (IBAction) timeColorChanged:(id) NSColorWell {
-
-//        struct CGColor *timecolor = [NSColorWell CGColor];
+    [[NSApplication sharedApplication] endSheet:self.configureSheet];
     
 }
     
+- (IBAction) configureSheet_cancel:(id) sender {
+
+    [[NSApplication sharedApplication] endSheet:self.configureSheet];
+    
+}
+
+- (IBAction) configureSheet_defaults:(id) sender {
+
+    [IBgfxvol setIntValue:130];
+    [IBfpsvol setFloatValue:4.0];
+    
+}
+
 @end
-
