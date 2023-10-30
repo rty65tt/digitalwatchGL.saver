@@ -37,9 +37,9 @@
     float step;
     int   cy;
     
-    float   zoom;
     int     glitchfx;
-    float     fps_var;
+    int     gfx_vol;
+    float   fps_vol;
     
     IBOutlet id configureSheet;
 
@@ -47,20 +47,17 @@
     IBOutlet id IBCancel;
     IBOutlet id IBSave;
 
-    
-    IBOutlet id IBzoom;
-    IBOutlet id IBglitchfx;
-    IBOutlet id IBfpsvar;
+    IBOutlet id IBgfxvol;
+    IBOutlet id IBfpsvol;
     
 }
 
 - (void)setUpOpenGL;
 - (void)setFrameSize:(NSSize)newSize;
 
-- (IBAction) timeColorChanged:(id) NSColorWell;
 
-- (IBAction) closeSheet_save:(id) sender;
-- (IBAction) closeSheet_cancel:(id) sender;
-- (IBAction) resetConfigureSheet:(id) sender;
+- (IBAction) configureSheet_save:(id) sender;
+- (IBAction) configureSheet_cancel:(id) sender;
+- (IBAction) configureSheet_defaults:(id) sender;
 
 @end
