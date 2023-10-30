@@ -1,5 +1,5 @@
 # digitalwatchGL.saver
-Screensaver macOS Objective-C and OpenGL with low energy use.
+Screensaver for macOS showing current time and day. Write on Objective-C and OpenGL with low resource use.
 
 
 ![screenshot1](screenshot.webp  "Screenshot")
