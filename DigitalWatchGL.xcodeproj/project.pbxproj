@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7701A1AB2AEE793A00850676 /* ConfigureSheet.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7701A1AA2AEE793A00850676 /* ConfigureSheet.xib */; };
+		770BF1FF2AF0445600291DE2 /* screenshot-options.png in Resources */ = {isa = PBXBuildFile; fileRef = 770BF1FE2AF0445600291DE2 /* screenshot-options.png */; };
 		77AD6AF12AE85F07008D0138 /* DigitalWatchGLView.h in Headers */ = {isa = PBXBuildFile; fileRef = 77AD6AF02AE85F07008D0138 /* DigitalWatchGLView.h */; };
 		77AD6AF32AE85F07008D0138 /* DigitalWatchGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 77AD6AF22AE85F07008D0138 /* DigitalWatchGLView.m */; };
 		77AD6AFB2AE8608B008D0138 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77AD6AFA2AE8608B008D0138 /* Cocoa.framework */; };
@@ -35,6 +36,7 @@
 
 /* Begin PBXFileReference section */
 		7701A1AA2AEE793A00850676 /* ConfigureSheet.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConfigureSheet.xib; sourceTree = "<group>"; };
+		770BF1FE2AF0445600291DE2 /* screenshot-options.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "screenshot-options.png"; sourceTree = "<group>"; };
 		77AD6AED2AE85F07008D0138 /* DigitalWatchGL.saver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DigitalWatchGL.saver; sourceTree = BUILT_PRODUCTS_DIR; };
 		77AD6AF02AE85F07008D0138 /* DigitalWatchGLView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DigitalWatchGLView.h; sourceTree = "<group>"; };
 		77AD6AF22AE85F07008D0138 /* DigitalWatchGLView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DigitalWatchGLView.m; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 				77C0F37B2AEC660B0022D040 /* LICENSE */,
 				77C0F3752AEC65EE0022D040 /* README.md */,
 				77C0F37E2AEC72DC0022D040 /* screenshot.webp */,
+				770BF1FE2AF0445600291DE2 /* screenshot-options.png */,
 				77AD6AEF2AE85F07008D0138 /* DigitalWatchGL */,
 				77C93CEA2AE992D100DFFC7F /* Resources */,
 				77DF94072AEB07CC007A9C95 /* PreviewApp */,
@@ -244,6 +247,7 @@
 			files = (
 				77C0F3762AEC65EE0022D040 /* README.md in Resources */,
 				77C93CEE2AE9938000DFFC7F /* thumbnail.png in Resources */,
+				770BF1FF2AF0445600291DE2 /* screenshot-options.png in Resources */,
 				7701A1AB2AEE793A00850676 /* ConfigureSheet.xib in Resources */,
 				77C0F37C2AEC660C0022D040 /* LICENSE in Resources */,
 				77C93CED2AE9938000DFFC7F /* thumbnail@2x.png in Resources */,
